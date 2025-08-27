@@ -81,16 +81,10 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-2 space-y-4 text-center bg-primary rounded-md py-4 shadow-lg">
             <a
-              href="/Solution"
+              href="/"
               className="block text-primary-foreground/90 hover:text-white"
             >
-              Solution
-            </a>
-            <a
-              href="#services"
-              className="block text-primary-foreground/90 hover:text-white"
-            >
-              Services
+              Home
             </a>
             <a
               href="#about"

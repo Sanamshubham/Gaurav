@@ -1,19 +1,30 @@
 
-import banner1 from "../assets/10.png";
+import banner1 from "../assets/13.jpg";
 import banner2 from "../assets/13.jpg";
 import banner3 from "../assets/77.avif";
-import carpet1 from "../assets/carpet1.jpeg";
-import carpet2 from "../assets/carpet2.jpeg";
-import carpet3 from "../assets/carpet3.jpeg";
-import carpet4 from "../assets/carpet4.jpeg";
-import carpet5 from "../assets/carpet5.jpeg";
-import carpet6 from "../assets/carpet6.jpeg";
-import carpet7 from "../assets/carpet1.jpeg";
-import carpet8 from "../assets/carpet2.jpeg";
-import carpet9 from "../assets/carpet3.jpeg";
-import carpet10 from "../assets/carpet4.jpeg";
-import carpet11 from "../assets/carpet5.jpeg";
-import carpet12 from "../assets/carpet6.jpeg";
+import carpet1 from "../assets/20.jpeg";
+import carpet2 from "../assets/21..jpeg";
+import carpet3 from "../assets/22.jpeg";
+import carpet4 from "../assets/23.jpeg";
+import carpet5 from "../assets/25.jpeg";
+import carpet6 from "../assets/26.webp";
+import carpet7 from "../assets/27.jpeg";
+import carpet8 from "../assets/28.jpeg";
+import carpet9 from "../assets/29.jpeg";
+import carpet10 from "../assets/30.jpeg";
+import carpet11 from "../assets/31.jpeg";
+import carpet12 from "../assets/32.jpeg";
+import carpet13 from "../assets/33.jpeg";
+import carpet14 from "../assets/34.jpeg";
+import carpet15 from "../assets/35.jpeg";
+import carpet16 from "../assets/36.jpeg";
+import carpet17 from "../assets/37.jpeg";
+import carpet18 from "../assets/38.jpeg";
+// import carpet19 from "../assets/39.jpeg";
+import carpet20 from "../assets/40.jpeg";
+
+
+
 
 
 
@@ -31,7 +42,8 @@ const Home = () => {
 // const [selectedImage, setSelectedImage] = useState(null);
 
   // Example images (replace with your real carpet images in /public/images/)
- const images = [carpet1, carpet2, carpet3, carpet4, carpet5, carpet6,carpet7, carpet8, carpet9, carpet10, carpet11, carpet12];
+ const images = [carpet1, carpet2, carpet3, carpet4, carpet5, carpet6,carpet7, carpet8, 
+  carpet9, carpet10, carpet11, carpet12,carpet13, carpet14, carpet15, carpet16, carpet17, carpet18, carpet20];
 
   // Close modal
   const closeModal = () => setSelectedIndex(null);
@@ -155,13 +167,12 @@ const Home = () => {
             </div>
         </section>
 
-
- <section id="gallery" className="py-16 bg-gray-50">
+ {/* Gallery Section */}
+      <section id="gallery" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-         <h2 className="text-primary text-5xl md:text-6xl font-bold text-center mb-16 py-6">
-  Our Carpet Collection
-</h2>
-
+          <h2 className="text-primary text-5xl md:text-6xl font-bold text-center mb-16 py-6">
+            Our Carpet Collection
+          </h2>
 
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -171,11 +182,14 @@ const Home = () => {
                 className="relative overflow-hidden rounded-2xl cursor-pointer shadow-md group"
                 onClick={() => setSelectedIndex(index)}
               >
-                <img
-                  src={src}
-                  alt={`Carpet ${index + 1}`}
-                  className="w-full h-64 object-cover transform group-hover:scale-105 transition duration-300"
-                />
+                {/* Fixed Size Container */}
+                <div className="aspect-square w-full">
+                  <img
+                    src={src}
+                    alt={`Carpet ${index + 1}`}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -185,10 +199,8 @@ const Home = () => {
       {/* Fullscreen Modal */}
       {selectedIndex !== null && (
         <div
-  className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
-//   onClick={closeModal}   // ✅ Only clicking BACKGROUND closes modal
->
-
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+        >
           {/* Close Button */}
           <button
             className="absolute top-6 right-8 text-white text-3xl font-bold"
@@ -223,9 +235,7 @@ const Home = () => {
             ›
           </button>
         </div>
-    
       )}
-    
     </div>
   );
 };

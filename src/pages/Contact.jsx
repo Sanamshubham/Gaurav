@@ -1,18 +1,22 @@
-  import { MapPin, Mail, Phone, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
-
-
+import { MapPin, Mail, Phone, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import gauravImg from "../assets/gaurav.jpeg"; // ✅ Add founder's image
 
 const About = () => (
- 
-        <section id="contact" class="py-20 bg-secondary/30">
-   
-
-
-<div className="p-8 max-w-5xl mx-auto text-center">
-      {/* Heading */}
-      <h2 className="text-3xl font-bold mb-6 text-primary">Contact Us</h2>
+  <section id="contact" className="py-20 bg-secondary/30">
+    <div className="p-8 max-w-6xl mx-auto text-center">
       
-      {/* Description */}
+      {/* Founder Image + Heading */}
+      <div className="flex flex-col items-center mb-10">
+        <img
+          src={gauravImg}
+          alt="Founder - Gaurav Jaiswal"
+          className="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-primary mb-4 hover:scale-105 transition"
+        />
+        <h2 className="text-3xl font-bold text-primary">Meet Our Founder</h2>
+        <p className="text-gray-700 mt-2 text-lg">Mr. Gaurav Jaiswal – Leading Gaurav & Brothers with Excellence</p>
+      </div>
+
+      {/* Company Description */}
       <p className="mb-4 text-lg">
         <strong>Gaurav & Brothers</strong>, located in Bhadohi – the Carpet City of India,
         specializes in manufacturing and supplying high-quality carpets.
@@ -21,7 +25,7 @@ const About = () => (
         <strong>Directors:</strong> V.K. Jaiswal & Gaurav Jaiswal
       </p>
 
-      {/* Cards Section */}
+      {/* Contact Info Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
         {/* Address Card */}
         <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
@@ -36,9 +40,7 @@ const About = () => (
         <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <Mail className="w-8 h-8 text-primary mb-3" />
           <h3 className="font-semibold text-lg mb-2">Email</h3>
-          <p className="text-gray-600 text-sm">
-            gbgauravandbrothers@gmail.com
-          </p>
+          <p className="text-gray-600 text-sm">gbgauravandbrothers@gmail.com</p>
         </div>
 
         {/* Contact Card */}
@@ -67,10 +69,7 @@ const About = () => (
         </a>
       </div>
     </div>
-
-  
-
-        </section>
+  </section>
 );
 
 export default About;
