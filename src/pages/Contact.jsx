@@ -1,6 +1,7 @@
-import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { MapPin, Mail, Phone, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import gauravImg from "../assets/gaurav.jpeg"; // ✅ Add founder's image
 
+<<<<<<< HEAD
 const Contact = () => (
   <section id="contact" className="py-16 sm:py-20 lg:py-28 bg-secondary/30">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,10 +97,77 @@ const Contact = () => (
             </div>
           </div>
 
+=======
+const About = () => (
+  <section id="contact" className="py-20 bg-secondary/30">
+    <div className="p-8 max-w-6xl mx-auto text-center">
+      
+      {/* Founder Image + Heading */}
+      <div className="flex flex-col items-center mb-10">
+        <img
+          src={gauravImg}
+          alt="Founder - Gaurav Jaiswal"
+          className="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-primary mb-4 hover:scale-105 transition"
+        />
+        <h2 className="text-3xl font-bold text-primary">Meet Our Founder</h2>
+        <p className="text-gray-700 mt-2 text-lg">Mr. Gaurav Jaiswal – Leading Gaurav & Brothers with Excellence</p>
+      </div>
+
+      {/* Company Description */}
+      <p className="mb-4 text-lg">
+        <strong>Gaurav & Brothers</strong>, located in Bhadohi – the Carpet City of India,
+        specializes in manufacturing and supplying high-quality carpets.
+      </p>
+      <p className="mb-6 text-gray-700">
+        <strong>Directors:</strong> V.K. Jaiswal & Gaurav Jaiswal
+      </p>
+
+      {/* Contact Info Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+        {/* Address Card */}
+        <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+          <MapPin className="w-8 h-8 text-primary mb-3" />
+          <h3 className="font-semibold text-lg mb-2">Address</h3>
+          <p className="text-gray-600 text-sm">
+            Railway Crossing, Gopal Patti Road, Bhadohi - 221401
+          </p>
+>>>>>>> f828432e250f23f63bb4933a8b603e78047bf1f2
         </div>
+
+        {/* Email Card */}
+        <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+          <Mail className="w-8 h-8 text-primary mb-3" />
+          <h3 className="font-semibold text-lg mb-2">Email</h3>
+          <p className="text-gray-600 text-sm">gbgauravandbrothers@gmail.com</p>
+        </div>
+
+        {/* Contact Card */}
+        <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center hover:shadow-xl hover:-translate-y-1 transition duration-300">
+          <Phone className="w-8 h-8 text-primary mb-3" />
+          <h3 className="font-semibold text-lg mb-2">Contact</h3>
+          <p className="text-gray-600 text-sm">
+            +91-9151739855 <br /> +91-9532656227 <br /> +91-9140285656
+          </p>
+        </div>
+      </div>
+
+      {/* Social Media */}
+      <div className="flex justify-center gap-6 mt-10">
+        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+          <Facebook className="w-6 h-6 text-primary hover:scale-110 transition" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <Instagram className="w-6 h-6 text-primary hover:scale-110 transition" />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <Linkedin className="w-6 h-6 text-primary hover:scale-110 transition" />
+        </a>
+        <a href="https://wa.me/919151739855" target="_blank" rel="noreferrer">
+          <MessageCircle className="w-6 h-6 text-primary hover:scale-110 transition" />
+        </a>
       </div>
     </div>
   </section>
 );
 
-export default Contact;
+export default About;

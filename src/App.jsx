@@ -1,11 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+<<<<<<< HEAD
 import Solutions from "./pages/Solutions";
 import Solution from "./components/Solution";
 import IndustryDetail from "./pages/IndustryDetails";
@@ -39,6 +40,22 @@ const App = () => (
 
     <Footer />
   </Router>
+=======
+
+const App = () => (
+  <div>
+    {/* <Services/> */}
+  
+    <Navbar />
+    <Home/>
+     
+    <About/>
+   
+    <Contact/>
+    <Footer />
+  
+  </div>
+>>>>>>> f828432e250f23f63bb4933a8b603e78047bf1f2
 );
 
 export default App;

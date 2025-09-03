@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
+=======
+import logo from "../assets/logo.png";
+>>>>>>> f828432e250f23f63bb4933a8b603e78047bf1f2
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-b bg-background/95 backdrop-blur-3xl supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+    <nav className="bg-primary sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo + Brand */}
@@ -21,14 +25,22 @@ const Navbar = () => {
                 alt="Vixel Logo"
                 className="h-10 w-auto object-contain"
               />
+<<<<<<< HEAD
               <span className="hidden sm:inline text-2xl font-bold text-primary">
                 V I X E L
               </span>
             </Link>
+=======
+              <span className="hidden sm:inline text-2xl font-bold text-primary-foreground">
+                Gaurav & Brothers
+              </span>
+            </a>
+>>>>>>> f828432e250f23f63bb4933a8b603e78047bf1f2
           </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-5">
+<<<<<<< HEAD
             <Link
               to="/"
               className="text-foreground/80 hover:text-foreground transition-colors"
@@ -59,12 +71,38 @@ const Navbar = () => {
             >
               Get Quote
             </Link>
+=======
+            <a
+              href="#"
+              className="text-primary-foreground/90 hover:text-white transition-colors"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="text-primary-foreground/90 hover:text-white transition-colors"
+            >
+              About
+            </a>
+            <a
+              href="#contact"
+              className="text-primary-foreground/90 hover:text-white transition-colors"
+            >
+              Contact
+            </a>
+            <a
+              href="#contact"
+              className="border border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-md h-10 px-4 py-2 text-sm font-medium transition"
+            >
+              Get Quote
+            </a>
+>>>>>>> f828432e250f23f63bb4933a8b603e78047bf1f2
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={toggleMenu}
-            className="md:hidden inline-flex items-center justify-center rounded-md h-10 w-10 hover:bg-accent hover:text-accent-foreground"
+            className="md:hidden inline-flex items-center justify-center rounded-md h-10 w-10 hover:bg-primary/80 text-primary-foreground"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +124,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
+<<<<<<< HEAD
           <div className="md:hidden mt-2 space-y-4 text-center">
             <Link
               to="/"
@@ -115,6 +154,28 @@ const Navbar = () => {
               to="/contact"
               className="block w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-md py-2 text-sm font-medium"
             >
+=======
+          <div className="md:hidden mt-2 space-y-4 text-center bg-primary rounded-md py-4 shadow-lg">
+            <a
+              href="/"
+              className="block text-primary-foreground/90 hover:text-white"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="block text-primary-foreground/90 hover:text-white"
+            >
+              About
+            </a>
+            <a
+              href="#contact"
+              className="block text-primary-foreground/90 hover:text-white"
+            >
+              Contact
+            </a>
+            <button className="w-full border border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-md py-2 text-sm font-medium transition">
+>>>>>>> f828432e250f23f63bb4933a8b603e78047bf1f2
               Get Quote
             </Link>
           </div>
